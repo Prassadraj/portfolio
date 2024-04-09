@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
 import { useForm, ValidationError } from "@formspree/react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 const Section = (props) => {
   const { children, mobileTop } = props;
 
@@ -52,11 +54,7 @@ const AboutSection = (props) => {
           <ul className="flex items-center gap-2 md:gap-4">
             <li className="cursor-pointer">
               <a href="https://github.com/Prassadraj" target="_blank">
-                <img
-                  className="w-6 h-6 md:w-9 md:h-9"
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                  alt=""
-                />
+                <FontAwesomeIcon className="text-gray-700   text-2xl md:text-3xl"  icon={faGithub} />
               </a>
             </li>
             <li className="cursor-pointer">
@@ -64,19 +62,14 @@ const AboutSection = (props) => {
                 href="https://www.linkedin.com/in/prassad-raj-54805123a/"
                 target="_blank"
               >
-                <img
-                  className="w-6 h-6 md:w-9 md:h-9"
-                  src="https://www.iconpacks.net/icons/1/free-linkedin-icon-112-thumb.png"
-                  alt=""
-                />
+                <FontAwesomeIcon  className="text-gray-700  text-2xl md:text-3xl" icon={faLinkedin} />
               </a>
             </li>
             <li className="cursor-pointer">
               <a href="tel:7358622277" target="_blank">
-                <img
-                  className="w-6 h-6 md:w-9 md:h-9"
-                  src="https://png.pngtree.com/png-vector/20230213/ourmid/pngtree-circle-phone-call-icon-in-black-color-png-image_6596895.png"
-                  alt=""
+                <FontAwesomeIcon
+                  className="text-gray-700  text-2xl md:text-3xl"
+                  icon={faPhone}
                 />
               </a>
             </li>
@@ -84,10 +77,10 @@ const AboutSection = (props) => {
         </div>
       </div>
 
-      <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:mt-0">
-        Hi, I'm
+      <h1 className="text-4xl md:text-5xl  font-extrabold leading-snug mt-8 md:mt-0">
+        Hi,
         <br />
-        <span className="bg-white px-1 italic">Prassad Raj</span>
+        I'm Prassad Raj
       </h1>
       <motion.p
         className="text-lg text-gray-600 mt-4"
@@ -104,13 +97,17 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        I make YouTube videos to help developers
+
+         MERN stack developer with a passion for crafting
+       <br /> engaging web solutions, committed to enhancing 
         <br />
-        learn how to build 3D apps
+         user experiences and achieving digital excellence.
+    
+
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
-        className={`bg-indigo-600 text-white py-4 px-8 
+        className={`bg-indigo-600 text-white py-2 px-4 md:py-4 md:px-8
       rounded-lg font-bold text-lg mt-4 md:mt-16`}
         initial={{
           opacity: 0,
@@ -331,7 +328,7 @@ const ContactSection = () => {
               className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
             />
             <ValidationError
-             className=" mt-1 text-red-500"
+              className=" mt-1 text-red-500"
               prefix="Email"
               field="email"
               errors={state.errors}
@@ -348,7 +345,7 @@ const ContactSection = () => {
               className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
             />
             <ValidationError
-            className=" mt-1 text-red-500"
+              className=" mt-1 text-red-500"
               errors={state.errors}
             />
             <button

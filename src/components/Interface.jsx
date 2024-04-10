@@ -54,7 +54,10 @@ const AboutSection = (props) => {
           <ul className="flex items-center gap-2 md:gap-4">
             <li className="cursor-pointer">
               <a href="https://github.com/Prassadraj" target="_blank">
-                <FontAwesomeIcon className="text-gray-700   text-2xl md:text-3xl"  icon={faGithub} />
+                <FontAwesomeIcon
+                  className="text-gray-700   text-2xl md:text-3xl"
+                  icon={faGithub}
+                />
               </a>
             </li>
             <li className="cursor-pointer">
@@ -62,7 +65,10 @@ const AboutSection = (props) => {
                 href="https://www.linkedin.com/in/prassad-raj-54805123a/"
                 target="_blank"
               >
-                <FontAwesomeIcon  className="text-gray-700  text-2xl md:text-3xl" icon={faLinkedin} />
+                <FontAwesomeIcon
+                  className="text-gray-700  text-2xl md:text-3xl"
+                  icon={faLinkedin}
+                />
               </a>
             </li>
             <li className="cursor-pointer">
@@ -83,7 +89,7 @@ const AboutSection = (props) => {
         I'm Prassad Raj
       </h1>
       <motion.p
-        className="text-lg text-gray-600 mt-4"
+        className="text-sm text-justify md:text-lg md:w-96 text-gray-600 mt-4"
         initial={{
           opacity: 0,
           y: 25,
@@ -97,13 +103,11 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-
-         MERN stack developer with a passion for crafting
-       <br /> engaging web solutions, committed to enhancing 
-        <br />
-         user experiences and achieving digital excellence.
+        MERN stack developer passionate about crafting
     
-
+        intuitive user experiences and driving results through 
+        innovative web applications. Committed to continuous 
+        learning and pushing the boundaries of the web development landscape.
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}

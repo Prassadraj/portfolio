@@ -103,8 +103,11 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
- I'm a MERN stack developer, I thrive on building web applications that are both user-friendly and results-oriented. My passion lies in crafting intuitive interfaces that drive success through innovation. I'm Committed to continuous 
-        learning and pushing the boundaries of the web development landscape.
+        I'm a MERN stack developer, I thrive on building web applications that
+        are both user-friendly and results-oriented. My passion lies in crafting
+        intuitive interfaces that drive success through innovation. I'm
+        Committed to continuous learning and pushing the boundaries of the web
+        development landscape.
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}

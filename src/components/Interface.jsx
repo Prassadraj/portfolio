@@ -89,7 +89,7 @@ const AboutSection = (props) => {
         I'm Prassad Raj
       </h1>
       <motion.p
-        className="text-sm text-justify md:text-lg md:w-96 text-gray-600 mt-4"
+        className="text-sm text-justify md:text-xl md:w-96 text-gray-600 mt-4"
         initial={{
           opacity: 0,
           y: 25,
@@ -103,10 +103,7 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        MERN stack developer passionate about crafting
-    
-        intuitive user experiences and driving results through 
-        innovative web applications. Committed to continuous 
+ I'm a MERN stack developer, I thrive on building web applications that are both user-friendly and results-oriented. My passion lies in crafting intuitive interfaces that drive success through innovation. I'm Committed to continuous 
         learning and pushing the boundaries of the web development landscape.
       </motion.p>
       <motion.button

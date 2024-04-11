@@ -5,8 +5,10 @@ import { useForm, ValidationError } from "@formspree/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 const Section = (props) => {
   const { children, mobileTop } = props;
+  // const[visible,setVisisble]=useState(false)
 
   return (
     <motion.section
@@ -111,8 +113,7 @@ const AboutSection = (props) => {
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
-        className={`bg-indigo-600 text-white py-2 px-4 md:py-4 md:px-8
-      rounded-lg font-bold text-lg mt-4 md:mt-16`}
+        className={`bg-indigo-600 bg-opacity-40 hover:bg-indigo-600 hover:text-white text-white py-2 px-4 md:py-4 md:px-8 rounded-lg font-bold text-lg mt-4 md:mt-16 shadow-lg backdrop-blur-lg`}
         initial={{
           opacity: 0,
           y: 25,

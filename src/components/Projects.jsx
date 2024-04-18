@@ -8,10 +8,10 @@ import { useEffect, useRef } from "react";
 
 export const projects = [
   {
-    title: "Wawatmos",
+    title: "Stay finder",
     url: "https://r3f-wawatmos-final.vercel.app/",
     image: "projects/wawatmos.jpg",
-    description: "Recreating the Atmos Awwwards website with React Three Fiber",
+    description: `A secure hotel booking platform with React, Node.js, Express, MongoDB, JWT authentication, and an admin interface for CRUD operations`,
   },
   {
     title: "Portfolio Baking",
@@ -25,18 +25,18 @@ export const projects = [
     image: "projects/avatar.jpg",
     description: "Learn how to use ReadyPlayerMe to create a 3D avatar",
   },
-  {
-    title: "Kanagame",
-    url: "https://www.youtube.com/watch?v=zwNF1-lsia8",
-    image: "projects/kanagame.jpg",
-    description: "Use React Three Fiber to create a 3D game",
-  },
-  {
-    title: "Loader",
-    url: "https://www.youtube.com/watch?v=L12wIvuZTOY",
-    image: "projects/loader.jpg",
-    description: "Create a loading screen for your r3f projects",
-  },
+  // {
+  //   title: "Kanagame",
+  //   url: "https://www.youtube.com/watch?v=zwNF1-lsia8",
+  //   image: "projects/kanagame.jpg",
+  //   description: "Use React Three Fiber to create a 3D game",
+  // },
+  // {
+  //   title: "Loader",
+  //   url: "https://www.youtube.com/watch?v=L12wIvuZTOY",
+  //   image: "projects/loader.jpg",
+  //   description: "Create a loading screen for your r3f projects",
+  // },
 ];
 
 const Project = (props) => {
@@ -82,7 +82,7 @@ const Project = (props) => {
         maxWidth={2}
         anchorX="left"
         anchorY="top"
-        fontSize={0.1}
+        fontSize={0.14}
         position={[-1, -0.6, 0]}
       >
         {project.description}

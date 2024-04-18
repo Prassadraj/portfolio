@@ -29,16 +29,16 @@ export const Menu = (props) => {
       ${menuOpened ? "w-full md:w-80" : "w-0"}`}
       >
         <div class="grid grid-cols-2 grid-rows-2 gap-6 p-8  absolute bottom-5 left-6">
-          <div class="flex items-start bg-white hover:text-white p-2 rounded-lg justify-center text-violet-500 hover:bg-indigo-600 shadow-lg backdrop-blur-lg bg-opacity-40">
+          <div class="flex items-start bg-white hover:text-white p-2 rounded-lg justify-center text-violet-500 hover:bg-indigo-600 shadow-lg backdrop-blur-lg bg-opacity-80">
             <MenuButton label="About" onClick={() => onSectionChange(0)} />
           </div>
-          <div class="flex items-start bg-white hover:text-white p-2 rounded-lg justify-center text-violet-500 hover:bg-indigo-600 shadow-lg backdrop-blur-lg bg-opacity-40">
+          <div class="flex items-start bg-white hover:text-white p-2 rounded-lg justify-center text-violet-500 hover:bg-indigo-600 shadow-lg backdrop-blur-lg bg-opacity-80">
             <MenuButton label="Skills" onClick={() => onSectionChange(1)} />
           </div>
-          <div class="flex items-start bg-white hover:text-white p-2 rounded-lg justify-center text-violet-500 hover:bg-indigo-600 shadow-lg backdrop-blur-lg bg-opacity-60">
+          <div class="flex items-start bg-white hover:text-white p-2 rounded-lg justify-center text-violet-500 hover:bg-indigo-600 shadow-lg backdrop-blur-lg bg-opacity-80">
             <MenuButton label="Projects" onClick={() => onSectionChange(2)} />
           </div>
-          <div class="flex items-start bg-white hover:text-white p-2 rounded-lg justify-center text-violet-500 hover:bg-indigo-600 shadow-lg backdrop-blur-lg bg-opacity-40">
+          <div class="flex items-start bg-white hover:text-white p-2 rounded-lg justify-center text-violet-500 hover:bg-indigo-600 shadow-lg backdrop-blur-lg bg-opacity-80">
             <MenuButton label="Contact" onClick={() => onSectionChange(3)} />
           </div>
         </div>

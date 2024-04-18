@@ -8,35 +8,30 @@ import { useEffect, useRef } from "react";
 
 export const projects = [
   {
+    title: "Chatterverse",
+    url: "https://chatterverse.netlify.app/",
+    image: "projects/chat.png",
+    description: "Revolutionizing messaging with ReactJS, Firebase, and Zustand, ensuring secure authentication and organized chats.",
+  },
+  {
     title: "Stay finder",
-    url: "https://r3f-wawatmos-final.vercel.app/",
-    image: "projects/wawatmos.jpg",
-    description: `A secure hotel booking platform with React, Node.js, Express, MongoDB, JWT authentication, and an admin interface for CRUD operations`,
+    url: "https://stay-finder.netlify.app/",
+    image: "projects/hotel.png",
+    description: `A hotel booking platform built with React, Node.js, Express, MongoDB, JWT authentication, and an admin interface for CRUD operations`,
   },
   {
-    title: "Portfolio Baking",
-    url: "https://www.youtube.com/watch?v=YkHqpqJgLKw",
-    image: "projects/baking.jpg",
-    description: "Learn how to bake a 3D model with Blender and use it in r3f",
+    title: "Page Turner",
+    url: "https://page-turner-app.netlify.app/",
+    image: "projects/pageturner.png",
+    description: "Book management app with ReactJS frontend and Node.js backend, offering intuitive navigation and comprehensive book management.",
   },
   {
-    title: "3D Avatar",
-    url: "https://www.youtube.com/watch?v=pGMKIyALcK0",
-    image: "projects/avatar.jpg",
-    description: "Learn how to use ReadyPlayerMe to create a 3D avatar",
+    title: "Fit or fat",
+    url: "https://fitorfat.pages.dev/",
+    image: "projects/gym.png",
+    description: "I built a gym website offering personalized fitness programs and coaching with easy contact options.",
   },
-  // {
-  //   title: "Kanagame",
-  //   url: "https://www.youtube.com/watch?v=zwNF1-lsia8",
-  //   image: "projects/kanagame.jpg",
-  //   description: "Use React Three Fiber to create a 3D game",
-  // },
-  // {
-  //   title: "Loader",
-  //   url: "https://www.youtube.com/watch?v=L12wIvuZTOY",
-  //   image: "projects/loader.jpg",
-  //   description: "Create a loading screen for your r3f projects",
-  // },
+
 ];
 
 const Project = (props) => {
@@ -55,26 +50,28 @@ const Project = (props) => {
 
   return (
     <group {...props}>
-      <mesh
-        position-z={-0.001}
-        onClick={() => window.open(project.url, "_blank")}
-        ref={background}
-      >
-        <planeGeometry args={[2.2, 2]} />
-        <meshBasicMaterial color="black" transparent opacity={0.4} />
-      </mesh>
+<mesh
+  position-z={-0.001}
+  onClick={() => window.open(project.url, "_blank")}
+  ref={background}
+>
+  <planeGeometry args={[2.5, 2.9, 2]} />
+  <meshBasicMaterial color="black" transparent opacity={0.4} />
+  <meshBasicMaterial color="black" />
+</mesh>
+
       <Image
         scale={[2, 1.2, 1]}
         url={project.image}
         toneMapped={false}
-        position-y={0.3}
+        position-y={0.6}
       />
       <Text
         maxWidth={2}
         anchorX={"left"}
         anchorY={"top"}
         fontSize={0.2}
-        position={[-1, -0.4, 0]}
+        position={[-1, -0.1, 0]}
       >
         {project.title.toUpperCase()}
       </Text>
@@ -82,8 +79,8 @@ const Project = (props) => {
         maxWidth={2}
         anchorX="left"
         anchorY="top"
-        fontSize={0.14}
-        position={[-1, -0.6, 0]}
+        fontSize={0.16}
+        position={[-1, -0.36, 0]}
       >
         {project.description}
       </Text>
@@ -91,7 +88,7 @@ const Project = (props) => {
   );
 };
 
-export const currentProjectAtom = atom(Math.floor(projects.length / 2));
+export const currentProjectAtom = atom(0);
 
 export const Projects = () => {
   const { viewport } = useThree();
@@ -104,7 +101,7 @@ export const Projects = () => {
           key={"project_" + index}
           position={[index * 2.5, 0, -3]}
           animate={{
-            x: 0 + (index - currentProject) * 2.5,
+            x: 0 + (index - currentProject) * 3,
             y: currentProject === index ? 0 : -0.1,
             z: currentProject === index ? -2 : -3,
             rotateX: currentProject === index ? 0 : -Math.PI / 3,

@@ -27,9 +27,9 @@ export const LoadingScreen = (props) => {
             width: `${progress}%`,
           }}
         >
-          Prassad Raj
+          Dive into My Showcase!
         </div>
-        <div className="opacity-40">Prassad Raj</div>
+        <div className="opacity-40">Dive into My Showcase!</div>
       </div>
     </div>
   );

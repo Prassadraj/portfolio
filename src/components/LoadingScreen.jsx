@@ -6,7 +6,7 @@ export const LoadingScreen = (props) => {
   const { progress, total, loaded, item } = useProgress();
 
   useEffect(() => {
-    console.log(progress, total, loaded, item);
+    // console.log(progress, total, loaded, item);
     if (progress === 100) {
       setTimeout(() => {
         setStarted(true);
@@ -27,9 +27,9 @@ export const LoadingScreen = (props) => {
             width: `${progress}%`,
           }}
         >
-          Dive into My Showcase!
+          Let's dive in!
         </div>
-        <div className="opacity-40">Dive into My Showcase!</div>
+        <div className="opacity-40">Let's dive in!</div>
       </div>
     </div>
   );

@@ -7,6 +7,63 @@ import { atom, useAtom } from "jotai";
 import { useEffect, useRef } from "react";
 
 export const projects = [
+
+  {
+    title: "Asset Manager",
+    url: "",
+    image: "projects/asset.png",
+    description: "IT asset lifecycle manager built with React, Node.js, and MySQL. Features real-time tracking, IP/MAC auto-discovery, and QR scanning.",
+  },
+  {
+    title: "Gaming Booking",
+    url: "https://jeronesports.vercel.app/",
+    image: "projects/gaming_booking.png",
+    description: "Real-time PlayStation gaming center booking platform built with Next.js, Firebase, and Tailwind CSS. Integrated Razorpay payment gateway and custom admin panel.",
+  },
+  {
+    title: "Pearl Architects",
+    url: "https://pearlarchitects.in/",
+    image: "projects/architects_site.png",
+    description: "Responsive architecture portfolio website built with Next.js and Tailwind CSS. Features custom animations, Nodemailer contact workflows, and SEO optimization.",
+  },
+  {
+    title: "AI Voice Assistant",
+    url: "https://ai-voice-deepgram.vercel.app/",
+    image: "projects/voice_assistant.png",
+    description: "AI-powered voice system using Next.js, Deepgram STT/TTS, and Groq LLM. Features real-time speech recognition, voice responses, and auto-silence detection.",
+  },
+  {
+    title: "VFX Studio",
+    url: "https://pixcellfactory.com/",
+    image: "projects/vfx.png",
+    description: "Interactive VFX portfolio with GSAP animations, Lenis smooth scrolling, Spline 3D models, and Swiper.js page-turning projects display.",
+  },
+  {
+    title: "Sales Analytics",
+    url: "",
+    image: "projects/sales.png",
+    description: "High-performance sales analytics dashboard. Features optimized state management, filter-based data views, and smooth rendering of large sales datasets.",
+  },
+  {
+    title: "Ticket Manager",
+    url: "",
+    image: "projects/ticket.png",
+    description: "IT service ticketing system built with React, Nodemailer, and REST APIs. Features interactive dashboards and optimized render performance.",
+  },
+  {
+    title: "Healthcare Corp",
+    url: "https://cpcdiagnostics.in/",
+    image: "projects/loader.png",
+    description: "Corporate website displaying products and services with Lenis smooth scrolling, responsive accessible frontend, and Resend contact form integrations.",
+  },
+  {
+    title: "Interior Design",
+    url: "https://tminteriors.in/",
+    image: "projects/baking.png",
+    description: "Visually rich grid-based website built with Payload CMS to showcase interior design projects. Features smooth scrolling and dynamic interactive elements.",
+  },
+
+
   {
     title: "Chatterverse",
     url: "https://chatterverse.netlify.app/",
@@ -47,24 +104,27 @@ const Project = (props) => {
   useFrame(() => {
     background.current.material.opacity = bgOpacity.get();
   });
-
+  const hasUrl = Boolean(project.url);
   return (
     <group {...props}>
-<mesh
-  position-z={-0.001}
-  onClick={() => window.open(project.url, "_blank")}
-  ref={background}
->
-  <planeGeometry args={[2.5, 2.9, 2]} />
-  <meshBasicMaterial color="black" transparent opacity={0.4} />
-  <meshBasicMaterial color="black" />
-</mesh>
+      <mesh
+        position-z={-0.001}
+        onClick={hasUrl ? () => window.open(project.url, "_blank") : undefined}
+        onPointerOver={hasUrl ? () => (document.body.style.cursor = "pointer") : undefined}
+        onPointerOut={hasUrl ? () => (document.body.style.cursor = "auto") : undefined}
+        ref={background}
+      >
+        <planeGeometry args={[2.5, 2.9, 2]} />
+        <meshBasicMaterial color="black" transparent opacity={0.4} />
+        <meshBasicMaterial color="black" />
+      </mesh>
 
       <Image
         scale={[2, 1.2, 1]}
         url={project.image}
         toneMapped={false}
         position-y={0.6}
+        className="cursor-pointer"
       />
       <Text
         maxWidth={2}
@@ -79,7 +139,7 @@ const Project = (props) => {
         maxWidth={2}
         anchorX="left"
         anchorY="top"
-        fontSize={0.16}
+        fontSize={0.14}
         position={[-1, -0.36, 0]}
       >
         {project.description}

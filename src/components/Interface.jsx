@@ -91,7 +91,7 @@ const AboutSection = (props) => {
         I'm Prassad Raj
       </h1>
       <motion.p
-        className="text-sm text-justify md:text-xl md:w-96 text-gray-600 mt-4"
+        className="text-sm  md:text-xl md:w-96 text-gray-600 mt-4"
         initial={{
           opacity: 0,
           y: 25,
@@ -105,11 +105,7 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        I'm a MERN stack developer, I thrive on building web applications that
-        are both user-friendly and results-oriented. My passion lies in crafting
-        intuitive interfaces that drive success through innovation. I'm
-        Committed to continuous learning and pushing the boundaries of the web
-        development landscape.
+        Full-Stack Developer with 2+ years of experience building responsive, scalable, and user-focused web applications. Skilled in modern frontend and backend technologies, API development, performance optimization, and delivering end-to-end solutions from development to deployment. Strong focus on interactive UI/UX, maintainable code, and high-performance web applications.
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
@@ -134,31 +130,45 @@ const AboutSection = (props) => {
 };
 
 const skills = [
+
   {
-    title: "JavaScript ",
-    level: 80,
+    title: "JavaScript",
+    level: 85,
   },
   {
-    title: "React ",
-    level: 80,
+    title: "TypeScript",
+    level: 85,
   },
   {
-    title: "Nodejs",
-    level: 80,
+    title: "React",
+    level: 85,
+  },
+  {
+    title: "Next.js",
+    level: 85,
+  },
+  {
+    title: "Node.js",
+    level: 85,
   },
   {
     title: "MongoDB",
-    level: 75,
+    level: 85,
+  },
+  {
+    title: "Firebase",
+    level: 85,
   },
   {
     title: "Tailwind CSS",
-    level: 65,
+    level: 85,
   },
   {
-    title: "Threejs / React Three Fiber",
-    level: 40,
+    title: "Three.js / React Three Fiber",
+    level: 60,
   },
 ];
+/*
 const languages = [
   {
     title: "English",
@@ -169,6 +179,7 @@ const languages = [
     level: 100,
   },
 ];
+*/
 
 const SkillsSection = () => {
   return (
@@ -217,7 +228,7 @@ const SkillsSection = () => {
             </div>
           ))}
         </div>
-        <div>
+        {/* <div>
           <h2 className="text-3xl md:text-5xl font-bold mt-10 text-white">
             Languages
           </h2>
@@ -263,7 +274,7 @@ const SkillsSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </motion.div>
     </Section>
   );
